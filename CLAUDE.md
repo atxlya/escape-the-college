@@ -14,16 +14,17 @@ docs/PROGRESS.md tracks which sub-prompt is done and records decisions.
 - Levels made in Tiled (maps in `public/maps`, tilesets in `public/tilesets`)
 - Vitest for tests, ESLint + Prettier for style
 
-| Command             | Does                                        |
-| ------------------- | ------------------------------------------- |
-| `npm run dev`       | Dev server with hot reload (port 5173)      |
-| `npm run build`     | Typecheck, then production build to `dist/` |
-| `npm run preview`   | Serve the built `dist/`                     |
-| `npm test`          | Unit tests (Vitest)                         |
-| `npm run typecheck` | TypeScript check only                       |
-| `npm run lint`      | ESLint                                      |
-| `npm run format`    | Prettier                                    |
-| `npm run tiles`     | Regenerate the placeholder tileset          |
+| Command              | Does                                         |
+| -------------------- | -------------------------------------------- |
+| `npm run dev`        | Dev server with hot reload (port 5173)       |
+| `npm run build`      | Typecheck, then production build to `dist/`  |
+| `npm run preview`    | Serve the built `dist/`                      |
+| `npm test`           | Unit tests (Vitest)                          |
+| `npm run test:smoke` | Browser smoke test of the build (Playwright) |
+| `npm run typecheck`  | TypeScript check only                        |
+| `npm run lint`       | ESLint                                       |
+| `npm run format`     | Prettier                                     |
+| `npm run tiles`      | Regenerate the placeholder tileset           |
 
 ## Folder map
 
@@ -37,6 +38,7 @@ docs/PROGRESS.md tracks which sub-prompt is done and records decisions.
 - `public/tilesets` – tileset images used by the maps
 - `public/assets` – sprites, audio and anything else the game loads (e.g. the logo at `public/assets/brand/logo.png`)
 - `scripts` – dev tooling (e.g. map checks)
+- `tests` – Playwright smoke tests of the built game (`.github/workflows/deploy.yml` runs them before deploying)
 - `docs` – GDD, progress checklist, LEVELS.md (Tiled how-to, layers, object types)
 - `images/` – original reference photos and the logo (source files, not loaded by the game).
   Anything the game loads must be copied into `public/assets/` (e.g. the logo goes to `public/assets/brand/logo.png`).

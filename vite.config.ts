@@ -1,8 +1,11 @@
 import { defineConfig } from 'vitest/config';
 
-export default defineConfig({
-  // Relative paths so the build works from any folder or host.
-  base: './',
+// GitHub Pages serves the game from https://atxlya.github.io/escape-the-college/.
+const PAGES_BASE = '/escape-the-college/';
+
+export default defineConfig(({ command, isPreview }) => ({
+  // The dev server stays at the root; builds (and `vite preview` of them) use the Pages folder.
+  base: command === 'build' || isPreview ? PAGES_BASE : '/',
   build: {
     target: 'es2022',
     // Phaser alone is ~1.2 MB minified, so raise the size warning threshold.
@@ -12,4 +15,4 @@ export default defineConfig({
     environment: 'node',
     include: ['src/**/*.test.ts'],
   },
-});
+}));

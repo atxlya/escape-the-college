@@ -7,7 +7,7 @@ Tick a sub-prompt when it meets the definition of done in CLAUDE.md.
 - [x] 0.1 Project skeleton
 - [x] 0.2 Rulebook
 - [x] 0.3 Tiled pipeline
-- [ ] 0.4 GitHub and deploy
+- [x] 0.4 GitHub and deploy
 
 ## Part 1: Core feel
 
@@ -72,3 +72,6 @@ Decisions made along the way, newest last.
 - 0.3: Benches are one-way platforms, grill windows are solid (for walls on Ground), spikes carry `hazard` but do nothing yet.
 - 0.3: Object types come from a registry (`src/systems/levelObjects.ts`); unknown types are skipped with a warning. `PlayerSpawn` is a marker for now and the camera starts centred on it.
 - 0.3: Groundwork: `ActionKeys` input helper reading `controls.ts`, temporary `panLeft/Right/Up/Down` (arrows) and `debugPhysics` (F1) controls, `CAMERA_PAN_SPEED` in tuning, `START_LEVEL` in `src/config/levels.ts`. ESLint now knows Node globals for `scripts/`.
+- 0.4: Builds use base `/escape-the-college/` (was `./`) so the game works at the GitHub Pages URL; `vite preview` uses it too, dev stays at `/`. A build for another host (e.g. itch.io) needs that base changed.
+- 0.4: GitHub Actions (`.github/workflows/deploy.yml`) runs typecheck, lint, unit tests, build and a Playwright smoke test on every push to `main`, then deploys `dist/` to Pages. Pages source must be set to "GitHub Actions" in the repo settings.
+- 0.4: Playwright smoke tests live in `tests/` (`npm run test:smoke`), separate from the Vitest unit tests in `src/`. They serve the built `dist/` and fail on any console error or page error.
