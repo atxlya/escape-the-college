@@ -2,6 +2,8 @@ import Phaser from 'phaser';
 import { COLOURS } from '../content/colours';
 import { BUILD_LABEL } from '../content/strings';
 import { GAME_HEIGHT, GAME_WIDTH } from '../config/tuning';
+import { addPixelText, centredX } from '../systems/pixelFont';
+import { CELL_HEIGHT } from '../logic/pixelFont';
 
 export class GameScene extends Phaser.Scene {
   constructor() {
@@ -9,13 +11,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   create(): void {
-    this.add
-      .text(Math.round(GAME_WIDTH / 2), Math.round(GAME_HEIGHT / 2), BUILD_LABEL, {
-        fontFamily: 'monospace',
-        fontSize: '8px',
-        color: COLOURS.text,
-      })
-      .setOrigin(0.5)
-      .setResolution(1);
+    const y = Math.floor((GAME_HEIGHT - CELL_HEIGHT) / 2);
+    addPixelText(this, centredX(BUILD_LABEL, GAME_WIDTH), y, BUILD_LABEL, COLOURS.text);
   }
 }
