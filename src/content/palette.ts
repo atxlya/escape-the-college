@@ -1,5 +1,5 @@
 // Numbers are for Phaser graphics and tints, strings for CSS-style config.
-export const COLOURS = {
+export const PALETTE = {
   background: 0x14101e,
   backgroundCss: '#14101e',
   text: 0xf4f4f4,

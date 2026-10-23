@@ -22,7 +22,7 @@ Phaser 3 + TypeScript + Vite. 320×180 game, 16×16 tiles, scaled up by whole nu
 - `src/entities` – game objects: Bit, ghosts, professors, crates
 - `src/systems` – Phaser-side managers: input, HUD, ERP notifications
 - `src/logic` – pure TypeScript rules, no Phaser imports (enforced by ESLint), unit-tested
-- `src/content` – strings and colours
+- `src/content` – text (strings.ts) and colours + placeholder looks (palette.ts)
 - `src/config` – game config, tuning numbers, controls
 - `public/maps`, `public/tilesets`, `public/assets` – Tiled maps, tilesets, sprites and audio
 - `scripts` – dev tooling

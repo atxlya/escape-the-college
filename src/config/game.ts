@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { COLOURS } from '../content/colours';
+import { PALETTE } from '../content/palette';
 import { BootScene } from '../scenes/BootScene';
 import { GameScene } from '../scenes/GameScene';
 import { PreloadScene } from '../scenes/PreloadScene';
@@ -10,7 +10,7 @@ export const gameConfig: Phaser.Types.Core.GameConfig = {
   parent: 'game',
   width: GAME_WIDTH,
   height: GAME_HEIGHT,
-  backgroundColor: COLOURS.backgroundCss,
+  backgroundColor: PALETTE.backgroundCss,
   pixelArt: true,
   roundPixels: true,
   scale: {
