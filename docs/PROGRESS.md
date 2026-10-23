@@ -65,3 +65,4 @@ Decisions made along the way, newest last.
 - 0.1: Text uses a built-in 5×7 bitmap font instead of browser text, which anti-aliased at small sizes.
 - 0.2: Renamed `src/content/colours.ts` to `palette.ts` (export `PALETTE`) to match the rulebook.
 - 0.2: Default controls changed to the rulebook set; jump is Space only (Up and W removed). Not wired up yet.
+- 0.2: `images/` holds source files only; anything the game loads is copied into `public/assets/`. Debug overlays (F1/F3) may use inline strings.

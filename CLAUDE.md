@@ -34,10 +34,11 @@ docs/PROGRESS.md tracks which sub-prompt is done and records decisions.
 - `src/config` – `tuning.ts` (feel and balance numbers), `controls.ts` (key bindings), `game.ts` (Phaser config)
 - `public/maps` – Tiled level maps (JSON)
 - `public/tilesets` – tileset images used by the maps
-- `public/assets` – sprites and audio
+- `public/assets` – sprites, audio and anything else the game loads (e.g. the logo at `public/assets/brand/logo.png`)
 - `scripts` – dev tooling (e.g. map checks)
 - `docs` – GDD, progress checklist
-- `images` – reference images and logo
+- `images/` – original reference photos and the logo (source files, not loaded by the game).
+  Anything the game loads must be copied into `public/assets/` (e.g. the logo goes to `public/assets/brand/logo.png`).
 
 ## Rules
 
@@ -52,6 +53,7 @@ docs/PROGRESS.md tracks which sub-prompt is done and records decisions.
 
 - All text (dialogue, ERP lines, professor catchphrases) lives in `src/content/strings.ts`,
   so the Hinglish lines can be swapped later. No string literals shown to the player anywhere else.
+  Debug overlays (F1/F3) are exempt.
 - All colours and placeholder looks live in `src/content/palette.ts`. No hex values elsewhere.
 - All feel and balance numbers (speeds, gravity, jump, timers, damage, limits) live in `src/config/tuning.ts`.
 - Controls live in `src/config/controls.ts`. Read keys from there, never hard-code a key in a scene.
