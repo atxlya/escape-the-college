@@ -13,6 +13,13 @@ export default tseslint.config(
     },
   },
   {
+    // Dev tooling runs in Node, not the browser.
+    files: ['scripts/**/*.{js,mjs}'],
+    languageOptions: {
+      globals: { ...globals.node },
+    },
+  },
+  {
     // src/logic must stay pure TypeScript so it can be unit-tested without Phaser.
     files: ['src/logic/**/*.ts'],
     rules: {

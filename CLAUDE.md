@@ -23,6 +23,7 @@ docs/PROGRESS.md tracks which sub-prompt is done and records decisions.
 | `npm run typecheck` | TypeScript check only                       |
 | `npm run lint`      | ESLint                                      |
 | `npm run format`    | Prettier                                    |
+| `npm run tiles`     | Regenerate the placeholder tileset          |
 
 ## Folder map
 
@@ -36,7 +37,7 @@ docs/PROGRESS.md tracks which sub-prompt is done and records decisions.
 - `public/tilesets` – tileset images used by the maps
 - `public/assets` – sprites, audio and anything else the game loads (e.g. the logo at `public/assets/brand/logo.png`)
 - `scripts` – dev tooling (e.g. map checks)
-- `docs` – GDD, progress checklist
+- `docs` – GDD, progress checklist, LEVELS.md (Tiled how-to, layers, object types)
 - `images/` – original reference photos and the logo (source files, not loaded by the game).
   Anything the game loads must be copied into `public/assets/` (e.g. the logo goes to `public/assets/brand/logo.png`).
 
@@ -93,4 +94,5 @@ docs/PROGRESS.md tracks which sub-prompt is done and records decisions.
 1. `npm run typecheck`, `npm run lint`, `npm test` and `npm run build` all pass.
 2. No console errors in the browser (run the dev server and check).
 3. docs/PROGRESS.md updated: tick the sub-prompt, add any decisions to Notes.
+   If object types or their properties changed, update the table in docs/LEVELS.md.
 4. One git commit whose message starts with the sub-prompt number, e.g. `1.3: attendance meter`.

@@ -15,6 +15,7 @@ Phaser 3 + TypeScript + Vite. 320×180 game, 16×16 tiles, scaled up by whole nu
 | `npm run typecheck` | TypeScript check only                       |
 | `npm run lint`      | ESLint                                      |
 | `npm run format`    | Prettier                                    |
+| `npm run tiles`     | Regenerate the placeholder tileset          |
 
 ## Folders
 
@@ -26,4 +27,4 @@ Phaser 3 + TypeScript + Vite. 320×180 game, 16×16 tiles, scaled up by whole nu
 - `src/config` – game config, tuning numbers, controls
 - `public/maps`, `public/tilesets`, `public/assets` – Tiled maps, tilesets, sprites and audio
 - `scripts` – dev tooling
-- `docs` – design docs
+- `docs` – design docs, [LEVELS.md](docs/LEVELS.md) for editing maps in Tiled

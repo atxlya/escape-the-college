@@ -1,8 +1,10 @@
 import Phaser from 'phaser';
 import { PALETTE } from '../content/palette';
+import { START_LEVEL } from '../config/levels';
 import { GAME_HEIGHT, GAME_WIDTH } from '../config/tuning';
+import { LevelLoader } from '../systems/LevelLoader';
 
-// Loads all game assets and shows a progress bar. Nothing to load yet.
+// Loads all game assets and shows a progress bar.
 export class PreloadScene extends Phaser.Scene {
   constructor() {
     super('Preload');
@@ -21,7 +23,7 @@ export class PreloadScene extends Phaser.Scene {
       fill.width = Math.round(barWidth * value);
     });
 
-    // Asset loading goes here, e.g. this.load.tilemapTiledJSON('l1-1', 'maps/l1-1.json');
+    new LevelLoader(this).preload(START_LEVEL);
   }
 
   create(): void {

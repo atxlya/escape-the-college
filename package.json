@@ -10,7 +10,8 @@
     "test": "vitest run",
     "typecheck": "tsc",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "tiles": "node scripts/make-placeholder-tiles.mjs"
   },
   "dependencies": {
     "phaser": "^3.90.0"

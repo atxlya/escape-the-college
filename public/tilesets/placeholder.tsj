@@ -1,0 +1,164 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "tiledversion": "1.11.2",
+  "name": "placeholder",
+  "image": "placeholder.png",
+  "imagewidth": 112,
+  "imageheight": 16,
+  "tilewidth": 16,
+  "tileheight": 16,
+  "tilecount": 7,
+  "columns": 7,
+  "margin": 0,
+  "spacing": 0,
+  "tiles": [
+    {
+      "id": 0,
+      "type": "floor",
+      "properties": [
+        {
+          "name": "collides",
+          "type": "bool",
+          "value": true
+        },
+        {
+          "name": "hazard",
+          "type": "bool",
+          "value": false
+        },
+        {
+          "name": "oneWay",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "type": "wall",
+      "properties": [
+        {
+          "name": "collides",
+          "type": "bool",
+          "value": true
+        },
+        {
+          "name": "hazard",
+          "type": "bool",
+          "value": false
+        },
+        {
+          "name": "oneWay",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "oneWay",
+      "properties": [
+        {
+          "name": "collides",
+          "type": "bool",
+          "value": true
+        },
+        {
+          "name": "hazard",
+          "type": "bool",
+          "value": false
+        },
+        {
+          "name": "oneWay",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "bench",
+      "properties": [
+        {
+          "name": "collides",
+          "type": "bool",
+          "value": true
+        },
+        {
+          "name": "hazard",
+          "type": "bool",
+          "value": false
+        },
+        {
+          "name": "oneWay",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "blackboard",
+      "properties": [
+        {
+          "name": "collides",
+          "type": "bool",
+          "value": false
+        },
+        {
+          "name": "hazard",
+          "type": "bool",
+          "value": false
+        },
+        {
+          "name": "oneWay",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "grill",
+      "properties": [
+        {
+          "name": "collides",
+          "type": "bool",
+          "value": true
+        },
+        {
+          "name": "hazard",
+          "type": "bool",
+          "value": false
+        },
+        {
+          "name": "oneWay",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "spikes",
+      "properties": [
+        {
+          "name": "collides",
+          "type": "bool",
+          "value": false
+        },
+        {
+          "name": "hazard",
+          "type": "bool",
+          "value": true
+        },
+        {
+          "name": "oneWay",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    }
+  ]
+}
