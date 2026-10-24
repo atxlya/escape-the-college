@@ -51,6 +51,7 @@ docs/PROGRESS.md tracks which sub-prompt is done and records decisions.
   Phaser code in scenes, entities and systems calls into it; it never goes the other way.
 - Every level element is set up from Tiled object properties, never hard-coded for one level.
   If a level needs something new, add a property type the loader understands, then use it in the map.
+- When adding a Tiled object type or property, update the table in docs/LEVELS.md.
 
 ### Data files (single source of truth)
 
